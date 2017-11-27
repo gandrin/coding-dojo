@@ -1,0 +1,18 @@
+{
+  "data": {
+    "user": {
+      "firstName": "Agent R.",
+      "roles": [
+        {
+          "name": "50% Dev"
+        },
+        {
+          "name": "50% Ops"
+        },
+        {
+          "name": "100% Refactor"
+        }
+      ]
+    }
+  }
+}
