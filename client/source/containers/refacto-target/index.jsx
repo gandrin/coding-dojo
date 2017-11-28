@@ -26,6 +26,14 @@ const inlineStyles = {
     borderRadius: '3px',
     backgroundColor: '#EEE',
   },
+  bubbleBinder: {
+    borderWidth: '0 0 12px 13px',
+    borderStyle: 'solid',
+    borderColor: 'transparent #EEE',
+    top: '17px',
+    left: '10px',
+    position: 'absolute',
+  },
   mainButton: {
     padding: '5px',
     position: 'relative',
@@ -84,6 +92,9 @@ class RefactoTarget extends Component {
               { this.state.displayTextBubble ?
                 (<div style={inlineStyles.textBubble}>
                   Stop It !
+                  <div style={inlineStyles.bubbleBinder}>
+                    { }
+                  </div>
                 </div>)
                 : (null)
               }
