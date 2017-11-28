@@ -13,23 +13,23 @@ export default class RefactoTarget extends Component {
     Math.floor((Math.random() * 400) + 1)
   )
 
+  blink = () => {
+    this.setState({
+      buttonMarginLeft: `${this.getRandomMargin()}px`,
+      buttonMarginTop: `${this.getRandomMargin()}px`,
+    });
+  }
+
+  StopIt = () => {
+    this.setState({ displayTextBubble: true });
+    this.props.mainActions.doStuff('Nice catch!');
+    setTimeout(() => {
+      this.props.mainActions.doSomething();
+      this.setState({ displayTextBubble: false });
+    }, 2000);
+  };
+
   render() {
-    const blink = () => {
-      this.setState({
-        buttonMarginLeft: `${this.getRandomMargin()}px`,
-        buttonMarginTop: `${this.getRandomMargin()}px`,
-      });
-    };
-
-    const StopIt = () => {
-      this.setState({ displayTextBubble: true });
-      this.props.mainActions.doStuff('Nice catch!');
-      setTimeout(() => {
-        this.props.mainActions.doSomething();
-        this.setState({ displayTextBubble: false });
-      }, 2000);
-    };
-
     return (
       <div style={styles.container}>
         {this.props.main}
@@ -43,10 +43,10 @@ export default class RefactoTarget extends Component {
                 marginTop: this.state.buttonMarginTop,
               },
             )}
-            onMouseOver={blink}
+            onMouseOver={this.blink}
           >
             <button
-              onClick={StopIt}
+              onClick={this.StopIt}
               style={styles.mainButton}
             >
               Main Button
