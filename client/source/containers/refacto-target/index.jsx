@@ -44,8 +44,8 @@ const inlineStyles = {
 class RefactoTarget extends Component {
 
   state = {
-    buttonMarginLeft: 'Opx',
-    buttonMarginTop: 'Opx',
+    buttonMarginLeft: '0px',
+    buttonMarginTop: '0px',
     displayTextBubble: false,
   }
 
