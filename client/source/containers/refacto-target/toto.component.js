@@ -29,20 +29,19 @@ export default class RefactoTarget extends Component {
     }, 2000);
   };
 
+  buttonWrapperStyle = (marginLeft, marginTop) =>
+    Object.assign({}, styles.buttonWrapper, {
+      marginLeft,
+      marginTop,
+    });
+
   render() {
     return (
       <div style={styles.container}>
         {this.props.main}
         <div style={styles.buttonContainer}>
           <div
-            style={Object.assign(
-              {},
-              styles.buttonWrapper,
-              {
-                marginLeft: this.state.buttonMarginLeft,
-                marginTop: this.state.buttonMarginTop,
-              },
-            )}
+            style={this.buttonWrapperStyle(this.state.buttonMarginLeft, this.state.buttonMarginTop)}
             onMouseOver={this.blink}
           >
             <button
