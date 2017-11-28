@@ -9,6 +9,7 @@ const inlineStyles = {
   container: {
     margin: '10px',
     position: 'relative',
+    textAlign: 'center',
   },
   buttonContainer: {
     height: '100vh',

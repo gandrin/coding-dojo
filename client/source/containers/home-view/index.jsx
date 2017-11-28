@@ -13,8 +13,8 @@ class HomeView extends Component {
           <div className="col-xs-12 col-md-6">
             <HelloCard authentication={authentication} />
           </div>
-          <RefactoTarget />
         </div>
+        <RefactoTarget />
       </div>
     );
   }
