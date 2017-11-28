@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Snapshot] RefactoTarget should match snapshot : 1`] = `
+<div
+  style={
+    Object {
+      "margin": "10px",
+      "position": "relative",
+      "textAlign": "center",
+    }
+  }
+>
+  toto
+  <div
+    style={
+      Object {
+        "height": "100vh",
+      }
+    }
+  >
+    <div
+      onMouseOver={[Function]}
+      style={
+        Object {
+          "marginLeft": "0px",
+          "marginTop": "0px",
+          "padding": "40px",
+          "transition": "margin 800ms cubic-bezier(0.23, 1, 0.32, 1) 100ms",
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "padding": "5px",
+            "position": "relative",
+          }
+        }
+      >
+        Main Button
+      </button>
+    </div>
+  </div>
+</div>
+`;
