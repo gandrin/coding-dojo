@@ -1,45 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import styles from './toto.style';
 
 import * as MainActions from '../../actions/main';
-
-
-const inlineStyles = {
-  container: {
-    margin: '10px',
-    position: 'relative',
-    textAlign: 'center',
-  },
-  buttonContainer: {
-    height: '100vh',
-  },
-  buttonWrapper: {
-    padding: '40px',
-    transition: 'margin 800ms cubic-bezier(0.23, 1, 0.32, 1) 100ms',
-  },
-  textBubble: {
-    position: 'absolute',
-    top: '-30px',
-    left: '10px',
-    fontSize: '15px',
-    width: '60px',
-    borderRadius: '3px',
-    backgroundColor: '#EEE',
-  },
-  bubbleBinder: {
-    borderWidth: '0 0 12px 13px',
-    borderStyle: 'solid',
-    borderColor: 'transparent #EEE',
-    top: '17px',
-    left: '10px',
-    position: 'absolute',
-  },
-  mainButton: {
-    padding: '5px',
-    position: 'relative',
-  },
-};
 
 class RefactoTarget extends Component {
 
@@ -71,13 +35,13 @@ class RefactoTarget extends Component {
     };
 
     return (
-      <div style={inlineStyles.container}>
+      <div style={styles.container}>
         {this.props.main}
-        <div style={inlineStyles.buttonContainer}>
+        <div style={styles.buttonContainer}>
           <div
             style={Object.assign(
               {},
-              inlineStyles.buttonWrapper,
+              styles.buttonWrapper,
               {
                 marginLeft: this.state.buttonMarginLeft,
                 marginTop: this.state.buttonMarginTop,
@@ -87,13 +51,13 @@ class RefactoTarget extends Component {
           >
             <button
               onClick={StopIt}
-              style={inlineStyles.mainButton}
+              style={styles.mainButton}
             >
               Main Button
               { this.state.displayTextBubble ?
-                (<div style={inlineStyles.textBubble}>
+                (<div style={styles.textBubble}>
                   Stop It !
-                  <div style={inlineStyles.bubbleBinder}>
+                  <div style={styles.bubbleBinder}>
                     { }
                   </div>
                 </div>)
