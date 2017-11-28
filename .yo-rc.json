@@ -1,0 +1,9 @@
+{
+  "generator-react-loopback": {
+    "applicationName": "coding-dojo",
+    "applicationFolder": "coding-dojo",
+    "clientRequired": true,
+    "clientLanguage": "es6",
+    "serverRequired": false
+  }
+}
