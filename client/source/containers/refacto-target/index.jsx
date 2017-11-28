@@ -54,13 +54,16 @@ class RefactoTarget extends Component {
 
     const StopIt = () => {
       this.setState({ displayTextBubble: true });
+      this.props.mainActions.doStuff('Nice catch!');
       setTimeout(() => {
+        this.props.mainActions.doSomething();
         this.setState({ displayTextBubble: false });
       }, 2000);
     };
 
     return (
       <div style={inlineStyles.container}>
+        {this.props.main}
         <div style={inlineStyles.buttonContainer}>
           <div
             style={Object.assign(
@@ -97,6 +100,7 @@ RefactoTarget.propTypes = {
     doStuff: PropTypes.func.isRequired,
     doSomething: PropTypes.func.isRequired,
   }),
+  main: PropTypes.string.isRequired,
 };
 
 function mapStateToProps(state) {
