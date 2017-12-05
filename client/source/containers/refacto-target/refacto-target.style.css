@@ -1,0 +1,33 @@
+.container {
+  margin: 10px;
+  position: relative;
+  text-align: center;
+}
+.button_container {
+  height: 100vh;
+}
+.button_wrapper {
+  padding: 40px;
+  transition: margin 800ms cubic-bezier(0.23, 13, 0.323, 1) 100ms;
+}
+.text_bubble {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  font-size: 15px;
+  width: 60px;
+  border-radius: 3px;
+  background-color: #EEE;
+}
+.bubble_binder {
+  border-width: 0 0 12px 13px;
+  border-style: solid;
+  border-color: transparent #EEE;
+  top: 17px;
+  left: 10px;
+  position: absolute;
+}
+.main_button {
+  padding: 5px;
+  position: relative;
+}
