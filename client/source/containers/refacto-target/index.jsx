@@ -41,7 +41,7 @@ const inlineStyles = {
   },
 };
 
-class RefactoTarget extends Component {
+export class RefactoTarget extends Component {
 
   state = {
     buttonMarginLeft: 'Opx',
